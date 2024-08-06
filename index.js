@@ -5,6 +5,10 @@ const port = 10000
 
 app.use(cors())
 
+app.get('/', (req, res)=>{
+    res.send('Olá, mundo')
+})
+
 app.get('/v1/user/:id', (request, res) => {
     console.log('request.url', request.url) // debug
     console.log('request.params.id', request.params.id)
