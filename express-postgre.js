@@ -1,18 +1,19 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 //postgresql://banco_chuchu_allan_user:5KhK1xK42ELcIYtacfuTDnnJgPhwbRSs@dpg-cqp1g0ggph6c73ff3200-a.oregon-postgres.render.com/banco_chuchu_allan
-
-const sequelize = new Sequelize('banco_chuchu_allan', 'banco_chuchu_allan_user', process.env.PASSWORD_RENDER_POSTGRES, {
-    host: 'dpg-cqp1g0ggph6c73ff3200-a.oregon-postgres.render.com',
+//postgresql://postgres.yhogvuqcegpuxhumgkyn:[YOUR-PASSWORD]@aws-0-us-west-1.pooler.supabase.com:6543/postgres
+const sequelize = new Sequelize('postgres', 'postgres.yhogvuqcegpuxhumgkyn', '', {
+    host: "aws-0-us-west-1.pooler.supabase.com",
     dialect: 'postgres',
+    port: 6543,
     logging: true, // Desative o log de SQL se não precisar
-    dialectOptions: {
-        supportBigNumbers: true,
-        ssl: {
-          rejectUnauthorized: false, // Trust the self-signed certificate
-          
-        }
-      }
+    // dialectOptions: {
+    //     supportBigNumbers: true,
+    //     ssl: {
+    //       rejectUnauthorized: false, // Trust the self-signed certificate
+
+    //     }
+    //   }
 });
 
 const User = sequelize.define('User', {
