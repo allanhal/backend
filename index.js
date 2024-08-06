@@ -9,6 +9,9 @@ app.get('/', (req, res)=>{
     res.send('Olá, mundo')
 })
 
+
+// https://pagamento.inter.com/pagamento?tipo=boleto&valor=100&pedido=100&desconto
+
 app.get('/v1/user/:id', (request, res) => {
     console.log('request.url', request.url) // debug
     console.log('request.params.id', request.params.id)
