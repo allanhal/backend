@@ -2,14 +2,15 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 //postgresql://banco_chuchu_allan_user:5KhK1xK42ELcIYtacfuTDnnJgPhwbRSs@dpg-cqp1g0ggph6c73ff3200-a.oregon-postgres.render.com/banco_chuchu_allan
 
-const sequelize = new Sequelize('banco_chuchu_allan', 'banco_chuchu_allan_user', '', {
+const sequelize = new Sequelize('banco_chuchu_allan', 'banco_chuchu_allan_user', process.env.PASSWORD_RENDER_POSTGRES, {
     host: 'dpg-cqp1g0ggph6c73ff3200-a.oregon-postgres.render.com',
     dialect: 'postgres',
-    logging: false, // Desative o log de SQL se não precisar
+    logging: true, // Desative o log de SQL se não precisar
     dialectOptions: {
         supportBigNumbers: true,
         ssl: {
           rejectUnauthorized: false, // Trust the self-signed certificate
+          
         }
       }
 });
