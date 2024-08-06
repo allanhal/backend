@@ -5,6 +5,8 @@ const port = 3000
 
 app.use(cors())
 
+app.get('/', (request, res) => { res.send('Olá, estou ligado.') })
+
 app.get('/v1/user/:id', (request, res) => {
     console.log('request.url', request.url) // debug
     console.log('request.params.id', request.params.id)
@@ -29,7 +31,7 @@ app.get('/v1/user/:id', (request, res) => {
 
 
         // Execute uma consulta SQL
-        connection.query('select * from dc.usuarios where id='+request.params.id+';', (err, results, fields) => {
+        connection.query('select * from dc.usuarios where id=' + request.params.id + ';', (err, results, fields) => {
             if (err) {
                 console.error('Erro ao executar consulta: ' + err.stack);
                 return;
