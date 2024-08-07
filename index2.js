@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'dc'
+  database: 'teste'
 });
 
 // Conecte-se ao banco de dados
@@ -17,7 +17,7 @@ connection.connect((err) => {
 
 
   // Execute uma consulta SQL
-  connection.query('select * from dc.usuarios where id=1;', (err, results, fields) => {
+  connection.query('select * from teste.alunos where id=1;', (err, results, fields) => {
     if (err) {
       console.error('Erro ao executar consulta: ' + err.stack);
       return;

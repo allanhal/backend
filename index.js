@@ -11,7 +11,10 @@ app.get('/', (req, res)=>{
 
 
 // https://pagamento.inter.com/pagamento?tipo=boleto&valor=100&pedido=100&desconto
+postgresql://postgres.usvcxewqdvrdprccfnwb:[YOUR-PASSWORD]@aws-0-us-west-1.pooler.supabase.com:6543/postgres
 
+
+usu 
 app.get('/v1/user/:id', (request, res) => {
     console.log('request.url', request.url) // debug
     console.log('request.params.id', request.params.id)
@@ -21,10 +24,10 @@ app.get('/v1/user/:id', (request, res) => {
 
     // Crie uma conexão com o banco de dados
     const connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'dc'
+        host: 'localhost: 10000',
+        user: '//postgres.usvcxewqdvrdprccfnwb:',
+        password: 'projeto-back',
+        database: 'projeto-back'
     });
 
     // Conecte-se ao banco de dados
