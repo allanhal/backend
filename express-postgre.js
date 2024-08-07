@@ -2,7 +2,7 @@ const { Sequelize, DataTypes } = require('sequelize');
 
 //postgresql://banco_chuchu_allan_user:5KhK1xK42ELcIYtacfuTDnnJgPhwbRSs@dpg-cqp1g0ggph6c73ff3200-a.oregon-postgres.render.com/banco_chuchu_allan
 //postgresql://postgres.yhogvuqcegpuxhumgkyn:[YOUR-PASSWORD]@aws-0-us-west-1.pooler.supabase.com:6543/postgres
-const sequelize = new Sequelize('postgres', 'postgres.yhogvuqcegpuxhumgkyn', '', {
+const sequelize = new Sequelize('postgres', 'postgres.usvcxewqdvrdprccfnwb', 'projeto-back', {
     host: "aws-0-us-west-1.pooler.supabase.com",
     dialect: 'postgres',
     port: 6543,
