@@ -1,4 +1,4 @@
-const app = require('./index.js')
+const app = require('./app-express.js')
 
 const { User } = require('../models/models.js');
 

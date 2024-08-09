@@ -1,4 +1,3 @@
-
 const {USUARIO, SENHA,HOST, PORTA_BANCO, BANCO} = process.env
 
 module.exports = {
