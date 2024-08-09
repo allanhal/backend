@@ -1,5 +1,6 @@
-const express = require('express')
-const app = express()
+const app = require('./index.js')
+
+const { User } = require('../models/models.js');
 
 app.get('/', (req, res) => {
     res.send('Olá, mundo')

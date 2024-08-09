@@ -1,7 +1,8 @@
-const { uri } = require('../config/config.js');
+const { uri } = require('../config/database.js');
+
+const { Sequelize, DataTypes, QueryTypes } = require('sequelize');
 
 const sequelize = new Sequelize(uri);
-
 
 const User = sequelize.define(
     'User',
@@ -12,7 +13,7 @@ const User = sequelize.define(
         },
         surname: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
         email: {
             type: DataTypes.STRING,
@@ -51,6 +52,9 @@ const Category = sequelize.define(
         timestamps: true
     },
 );
+
+// Sincronizar o modelo com o banco de dados    
+sequelize.sync();
 
 module.exports ={
     User,
