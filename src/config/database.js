@@ -1,3 +1,6 @@
+
+const {USUARIO, SENHA,HOST, PORTA_BANCO, BANCO} = process.env
+
 module.exports = {
-  uri: 'postgresql://'+process.env.USUARIO+':'+process.env.SENHA+'@'+process.env.HOST+':6543/postgres'
+  uri: 'postgresql://'+USUARIO+':'+SENHA+'@'+HOST+':'+PORTA_BANCO+'/'+BANCO
 }
