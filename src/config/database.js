@@ -1,3 +1,8 @@
 module.exports = {
-  uri: 'postgresql://postgres.yhogvuqcegpuxhumgkyn:chuchu-banco-vai-dar-bom@aws-0-us-west-1.pooler.supabase.com:6543/postgres'
+  uri: 'postgresql://'+process.env.USUARIO+':'+process.env.SENHA+'@'+process.env.HOST+':6543/postgres'
 }
+
+
+// USUARIO=postgres.yhogvuqcegpuxhumgkyn
+// SENHA=chuchu-banco-vai-dar-bom
+// HOST=aws-0-us-west-1.pooler.supabase.com
